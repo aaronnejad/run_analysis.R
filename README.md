@@ -1,3 +1,6 @@
+Please note that this acts as a codebook aswell. 
+
+
 run_analysis.R
 ==============
 
