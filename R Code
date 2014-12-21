@@ -1,0 +1,26 @@
+# Below code will perform the cleaning data for the course project.
+
+#set working directory to be dir where files are 
+a<-read.table(“activity_labels.txt)   
+f<-read.table(“features.txt”)
+stest<-read.table(“subject_test.txt”)    
+strain<- read.table(“subject_train .txt“)   
+stest<- read.table(“subject_test.txt”)    
+strain<- read.table(“subject_train.txt”)
+xts<-read.table(“X_test.txt”)  
+xtr<-read.table(“X_train.txt”)  
+yts<read.table(“y_test.txt”)     
+ytr<-read.table(“y_train.txt”)   
+
+#Merging
+Xtt<-rbind(xts,xtr)      
+Ytt<-rbind(yts,ytr)         
+xy<-cbind(xtt,ytt)
+
+labeling columns
+
+colnames(xy)<-f$V2
+names(xy)[562]<-"Y-Data".
+
+# writing the data frame into my main directory as a text file 
+write.table(xy,file="tidy.txt")
